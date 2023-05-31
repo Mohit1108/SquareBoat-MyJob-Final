@@ -1,0 +1,121 @@
+.modalContainer {
+  overflow-y: scroll !important;
+  position: fixed;
+  top: 15%;
+  left: 20%;
+  right: 20%;
+  width: 60%;
+  min-height: 60%;
+  max-height: 80%;
+  padding: 40px 30px;
+  color: #fff;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0px 0px 0px 1px #8e909587;
+  background: linear-gradient(180deg, #303f60 50%, #fff 50%);
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.crossBtn {
+  position: absolute;
+  right: 15px;
+  background: #fff;
+  color: #303f60;
+  padding: 10px;
+  line-height: 10px;
+  border-radius: 100px;
+  top: 15px;
+}
+.crossBtn:hover {
+  background: #8e909587;
+  color: #fff;
+}
+
+/* 
+.modal_container {
+  position: relative;
+  top: 85px;
+  left: 373px;
+  width: 694px;
+  height: 731px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 30px 36px #557da526;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+.modal_heading span {
+  position: absolute;
+  left: 30px;
+  top: 27px;
+  width: 192px;
+  height: 23px;
+  text-align: left;
+  font: 19px;
+  letter-spacing: 0px;
+  color: #303f60;
+  opacity: 1;
+}
+
+.modal_heading div {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+  width: 15px;
+  height: 15px;
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.modal_container hr {
+  top: 60px;
+  left: 30px;
+  width: 634px;
+  height: 0px;
+  border: 1px solid #303f60;
+  opacity: 0.2;
+}
+
+.modal_summary {
+  position: absolute;
+  top: 81px;
+  left: 30px;
+  width: 138px;
+  height: 17px;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: #303f60;
+  opacity: 1;
+}
+
+.modal_details {
+  position: absolute;
+  top: 117px;
+  left: 15px;
+  width: 620px;
+  display: flex;
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  background-color: #a7afb7;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  gap: 10px;
+  height: 570px;
+}
+
+.modal_details--empty {
+  width: 300vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

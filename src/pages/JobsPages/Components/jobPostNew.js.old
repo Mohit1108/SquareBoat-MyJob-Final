@@ -1,0 +1,80 @@
+import React, { useState } from "react";
+import axios from "axios";
+
+function JobPostForm() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [location, setLocation] = useState("");
+  const [loading, setLoading] = useState();
+
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+  };
+
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      setLoading(true);
+
+      const response = await axios.post(
+        "https://jobs-api.squareboat.info/api/v1/jobs/",
+        {
+          title,
+          description,
+          location
+        }
+      );
+      console.log(response.data);
+      // Clear form fields
+      setTitle("");
+      setDescription("");
+      setLocation("");
+      alert("Job posted successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("Error posting job. Please try again later.");
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="title">Title</label>
+      <input
+        type="text"
+        id="title"
+        value={title}
+        onChange={handleTitleChange}
+        required
+      />
+
+      <label htmlFor="description">Description</label>
+      <textarea
+        id="description"
+        value={description}
+        onChange={handleDescriptionChange}
+        required
+      ></textarea>
+
+      <label htmlFor="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        value={location}
+        onChange={handleLocationChange}
+        required
+      />
+
+      {/* <button type="submit">Post Job</button> */}
+    </form>
+  );
+}
+
+export default JobPostForm;
